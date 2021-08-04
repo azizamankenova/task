@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <record id="info_form" model="ir.ui.view">
+        <field name="name">task.info.form</field>
+        <field name="model">task.info</field>
+        <field name="arch" type="xml">
+            <form string="Info">
+                <sheet>
+<!--                    <div class="oe_title">-->
+<!--                        <h1>-->
+<!--                            <field name="patient_name"/>-->
+<!--                        </h1>-->
+<!--                    </div>-->
+                    <group>
+                        <group col="3">
+                            <field name="ser_type"/>
+                            <field name="floors"/>
+                            <field name="area"/> <label for="area" string="m&#178;" nolabel="1" colspan="1" />
+                            <field name="volume"/><label for="area" string="m&#179;" nolabel="1" colspan="1" />
+                            <field name="total_area"/><label for="area" string="m&#178;" nolabel="1" colspan="1" />
+                            <field name="balcony_area"/><label for="area" string="m&#178;" nolabel="1" colspan="1" />
+                            <field name="living_area"/><label for="area" string="m&#178;" nolabel="1" colspan="1" />
+                            <field name="nonliving_area"/><label for="area" string="m&#178;" nolabel="1" colspan="1" />
+                        </group>
+                        <group>
+                            <field name="no_flats"/>
+                            <field name="no_rooms"></field>
+<!--                            <field name="tesl_nazn"></field>-->
+                            <field name="material_walls"></field>
+                            <field name="year"></field>
+                            <field name="physical"></field>
+                            <field name="date"></field>
+                            <field name="director"></field>
+                        </group>
+                    </group>
+                </sheet>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids" widget="mail_followers"/>-->
+<!--                    <field name="activity_ids" widget="mail_activity"/>-->
+<!--                    <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>-->
+<!--                </div>-->
+
+
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_info" model="ir.actions.act_window">
+        <field name="name">Info</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">task.info</field>
+        <field name="view_mode">form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Write the information!
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="task_info" name="Info" parent="task_root" action="action_info" sequence="2"/>
+</odoo>

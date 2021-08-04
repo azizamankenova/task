@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_task_card,access.task.card,model_task_card,,1,1,1,1
+access_task_info,access.task.info,model_task_info,,1,1,1,1
