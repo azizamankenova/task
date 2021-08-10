@@ -10,7 +10,7 @@
     'data': [
              'security/ir.model.access.csv',
              'views/card.xml',
-
+             'views/construction.xml',
              'views/info.xml'
              ],
     'demo': [],

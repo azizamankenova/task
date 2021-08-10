@@ -3,7 +3,8 @@
 from odoo import models, fields,api
 from datetime import date
 
-class Card(models.Model):
+
+class Info(models.Model):
     _name = 'task.info'
     # _rec_name = 'name'
     _description = 'Info'\

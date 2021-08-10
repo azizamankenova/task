@@ -6,29 +6,46 @@
         <field name="arch" type="xml">
             <form string="Cards">
                 <sheet>
+
+                    <div class="oe_title">
+                        <h1>
+                            <label for="name" string="Название актива"/>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="docs" type="object" class="oe_highlight" string="Документы"/>
+                        <button name="part" type="object" string="Часть" class="oe_highlight"/>
+                        <button name="materials" type="object" string="Ведомость материалов" class="oe_highlight"/>
+                    </div>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="requests" type="object" string="Запросы" class="oe_highlight"/>
+                        <button name="service" type="object" string="Обслуживание" class="oe_highlight"/>
+                    </div>
                     <group>
+<!--                        <group>-->
+<!--                            <field name="image" widget="image" class="oe_avatar" nolabel="1"/>-->
+<!--                        </group>-->
                         <group>
                             <field name="obl"/>
                             <field name="reg"/>
                             <field name="city"/>
                             <field name="reg_in_city"/>
                             <field name="address"/>
+                            <field name="knum"/>
                         </group>
                         <group>
-                            <field name="knum"/>
                             <field name="inum"></field>
-                            <field name="tsel_nazn"></field>
-                            <field name="category_fond"></field>
+                            <field name="pass_no"></field>
+                            <field name="director"></field>
+                            <field name="nachalnik"></field>
+                            <field name="ispolnitel"></field>
+                            <field name="date"></field>
+<!--                            <field name="tsel_nazn"></field>-->
+<!--                            <field name="category_fond"></field>-->
                         </group>
                     </group>
                 </sheet>
-<!--                <div class="oe_chatter">-->
-<!--                    <field name="message_follower_ids" widget="mail_followers"/>-->
-<!--                    <field name="activity_ids" widget="mail_activity"/>-->
-<!--                    <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>-->
-<!--                </div>-->
-
-
             </form>
         </field>
     </record>
@@ -48,6 +65,6 @@
     </record>
 
 
-    <menuitem id="task_root" name="Task" sequence="0"/>
-    <menuitem id="task_card" name="Card" parent="task_root" action="action_card" sequence="1"/>
+    <menuitem id="task_root" name="Активы" sequence="0"/>
+    <menuitem id="task_card" name="Карточка" parent="task_root" action="action_card" sequence="1"/>
 </odoo>
